@@ -7,7 +7,7 @@ const style= StyleSheet.create({
         height: Dimensions.get('window').height/6,
         width: Dimensions.get('window').width/4,
         padding:10,
-        backgroundColor:'#7bacfc',
+        backgroundColor:'#cfe0fc',
         textAlign: 'center',
         borderWidth: 1,
         borderColor:'#888'

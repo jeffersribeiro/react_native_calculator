@@ -9,14 +9,14 @@ const initalState = {
       oparation: null, // redebe a operação a ser feita
       values:[0,0], //Array que recebe dois valores da calculadora
       current:0,
-//estado initcial de alguns valores
+//estado inicial de alguns valores
 }
 export default class App extends React.Component{
 
       state={...initalState} //Oparador Spread
 
-      addDigit = n =>{
-          if (n==='.' && tsExpressionWithTypeArguments.state.displayValue.include('.')){
+      addDigit = n => {
+          if (n==='.' && this.state.displayValue.include('.')){
                 return
           }
           const clearDisplay  = this.state.displayValue === '0'
@@ -44,7 +44,7 @@ export default class App extends React.Component{
                const equals = operation === '='   
                const values = [...this.state.values]
                try{
-                     values[0] = eval(`${values[0]}${this.state.operartion}${values[1]}`) //importante para caralho 
+                     values[0] = eval(`${values[0]} ${this.state.operartion} ${values[1]}`) //importante para caralho 
                }catch (e) {
                   values[0] = this.state.values[0]
                }
@@ -85,7 +85,7 @@ export default class App extends React.Component{
                               <Button label='+' operation onClick={this.setOPeration}/>
                               <Button label='0' onClick={this.addDigit}/>
                               <Button label='=' double onClick={this.setOPeration}/>
-                              <Button label='.'  operation onClick={this.setOPeration}/>
+                              <Button label='.' operation onClick={this.setOPeration}/>
                               {/* <Button label='%'operation onClick={this.setOPeration}/> */}
                   </View>
             </View>
