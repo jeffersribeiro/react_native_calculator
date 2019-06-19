@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Dimensions, TouchableNativeFeedback, StyleSheet} from 'react-native'
+import { View, Text, Dimensions, TouchableHighlight, StyleSheet} from 'react-native'
 
 const style= StyleSheet.create({
     button:{
@@ -34,9 +34,9 @@ export default  props =>{
 
     return(
         <View>
-    <TouchableNativeFeedback onPress={() => props.onClick(props.label)}>
+    <TouchableHighlight onPress={() => props.onClick(props.label)}>
         <Text style={stylesButtons}>{props.label}</Text>
-    </TouchableNativeFeedback>
+    </TouchableHighlight>
     </View>
 )
 }
